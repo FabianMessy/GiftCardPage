@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito de Onda</title>
+    <style>
+        .box {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        margin: 10px auto;
+        opacity: 0;
+        transform: translateY(30px); /* Começa deslocada para baixo */
+        }
+    
+    .first {
+        animation: slideUp 1s ease-in forwards;
+    }
+    
+    .second {
+        animation: slideUp 1s ease-in 2s forwards; /* Aparece 2s depois */
+    }
+    
+    @keyframes slideUp {
+        from {
+        opacity: 0;
+        transform: translateY(30px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="box first">Div 1</div>
+    <div class="box second">Div 2</div>
+</body>
+</html>
